@@ -1,0 +1,155 @@
+.contact {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    z-index: 20;
+    background: var(--yellow-theme-background-color);
+    &__content {
+        padding: 20px;
+
+        .message {
+            position: absolute;
+            top: 50px;
+            z-index: 30;
+            right: 20px;
+            width: 30%;
+            &__error,
+            &__success {
+                color: #fff;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                opacity: 0;
+                transition: all 0.5s ease;
+                p {
+                    margin-left: 10px;
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+            }
+
+            &__error {
+                background-color: red;
+            }
+
+            &__success {
+                background-color: green;
+            }
+
+            &__error.show,
+            &__success.show {
+                opacity: 1;
+            }
+        }
+
+        &__header-text {
+            color: var(--yellow-theme-sub-text-color);
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            width: fit-content;
+            line-height: 1rem;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid var(--yellow-theme-main-color);
+        }
+        &__header-text::after,
+        &__header-text::before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 5px;
+            background-color: var(--yellow-theme-main-color);
+            bottom: -1px;
+        }
+        &__header-text::after {
+            left: 0;
+        }
+        &__header-text::before {
+            right: 0;
+        }
+        &__form {
+            margin-top: 30px;
+
+            &__controlsWrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                margin-bottom: 30px;
+
+                div {
+                    position: relative;
+
+                    .inputName,
+                    .inputEmail,
+                    .inputDescription {
+                        width: 100%;
+                        border: 2px solid var(--yellow-theme-main-color);
+                        transition: all 0.5 ease;
+                        padding: 16px 12px;
+                        position: relative;
+                        background: transparent;
+                        color: var(--yellow-theme-sub-text-color);
+                    }
+                    .nameLabel,
+                    .emailLabel,
+                    .descriptionLabel {
+                        font-weight: 500;
+                        position: absolute;
+                        top: 7px;
+                        left: 12px;
+                        transition: all 0.2s ease;
+                        color: var(--yellow-theme-sub-text-color);
+                        font-size: 16px;
+                    }
+                    .inputName:focus,
+                    .inputEmail:focus,
+                    .inputDescription:focus {
+                        outline: none;
+                    }
+                    .inputName:focus + .nameLabel,
+                    .inputName:valid + .nameLabel,
+                    .inputEmail:focus + .emailLabel,
+                    .inputEmail:valid + .emailLabel,
+                    .inputDescription:focus + .descriptionLabel,
+                    .inputDescription:valid + .descriptionLabel {
+                        font-size: 18px;
+                        top: -25px;
+                        left: 0px;
+                    }
+                }
+            }
+            button {
+                cursor: pointer;
+                font-size: 2rem;
+                background: transparent;
+                padding: 1rem 2rem;
+                color: var(--yellow-theme-main-color);
+                border: 1.5px solid var(--yellow-theme-main-color);
+                font-weight: 600;
+                &:hover {
+                    background-color: var(--yellow-theme-main-color);
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__content .message {
+        width: 80%;
+    }
+    .contact__content__form {
+        text-align: center;
+
+        &__controlsWrapper {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
