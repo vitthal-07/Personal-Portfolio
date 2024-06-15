@@ -11,22 +11,13 @@ export const Contact = () => {
     const form = useRef();
     const [errorMessageVisible, setErrorMessageVisible] = useState(false);
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
-    console.log(
-        import.meta.VITE_SERVICE_ID,
-        import.meta.VITE_TEMPLATE_ID,
-        import.meta.VITE_PUBLIC_KEY
-    );
+
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs
-            .sendForm(
-                import.meta.VITE_SERVICE_ID,
-                import.meta.VITE_TEMPLATE_ID,
-                form.current,
-                {
-                    publicKey: import.meta.VITE_PUBLIC_KEY,
-                }
-            )
+            .sendForm("service_h00441q", "template_abc5ktd", form.current, {
+                publicKey: "ErBYe3to_e5uy9o5x",
+            })
             .then(
                 () => {
                     e.target.reset();
