@@ -13,7 +13,7 @@ export default function Home() {
                 <h1>
                     Hello, I'm Vitthal
                     <br />
-                    Front end developer
+                    MERN Stack developer
                 </h1>
             </div>
             <Animate

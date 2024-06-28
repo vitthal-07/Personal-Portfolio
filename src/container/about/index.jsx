@@ -26,6 +26,7 @@ const personalDetails = [
     {
         label: "Contact No:",
         value: "+91 9356613671",
+        
     },
 ];
 
