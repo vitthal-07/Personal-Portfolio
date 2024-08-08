@@ -32,6 +32,7 @@ export const Skills = () => {
                             <div>
                                 {item.data.map((skillitem, i) => (
                                     <AnimateKeyframes
+                                        key={i}
                                         play
                                         duration={1}
                                         keyframes={[
@@ -40,10 +41,7 @@ export const Skills = () => {
                                         ]}
                                         iterationCount={1}
                                     >
-                                        <div
-                                            key={i}
-                                            className='progressbar-wrapper'
-                                        >
+                                        <div className='progressbar-wrapper'>
                                             <p>{skillitem.skillName}</p>
                                             <Line
                                                 percent={skillitem.percentage}

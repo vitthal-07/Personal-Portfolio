@@ -26,12 +26,11 @@ const personalDetails = [
     {
         label: "Contact No:",
         value: "+91 9356613671",
-        
     },
 ];
 
 const jobSummary =
-    "A third-year Computer Engineering student at G H Raisoni College of Engineering and Management, Wagholi, with a passion for software development. I have a solid foundation in programming languages like Java, C++, and JavaScript, and I specialize in React JS development. Currently, I am enhancing my skills in backend development. I am enthusiastic about leveraging technology to solve real-world problems and am eager to explore new opportunities in the tech industry.";
+    "As a third-year Computer Engineering student at G H Raisoni College of Engineering and Management in Wagholi, I have a strong passion for software development. I possess a solid foundation in programming languages such as Java, C++, and JavaScript, with a particular specialization in MERN Stack development. I have successfully built industry-level projects using both JavaScript and TypeScript, showcasing my ability to develop robust and scalable solutions. Currently, I'm enhancing my Java programming skills and am enthusiastic about leveraging technology to solve real-world problems. I am eager to explore new opportunities in the tech industry and contribute to innovative solutions.";
 export const About = () => {
     return (
         <section id='about' className='about'>

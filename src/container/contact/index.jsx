@@ -11,9 +11,11 @@ export const Contact = () => {
     const form = useRef();
     const [errorMessageVisible, setErrorMessageVisible] = useState(false);
     const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsLoading(true);
         emailjs
             .sendForm("service_h00441q", "template_abc5ktd", form.current, {
                 publicKey: "ErBYe3to_e5uy9o5x",
@@ -26,6 +28,7 @@ export const Contact = () => {
                         setSuccessMessageVisible(false);
                     }, 3000);
                     setErrorMessageVisible(false);
+                    setIsLoading(false);
                 },
                 (error) => {
                     e.target.reset();
@@ -34,6 +37,7 @@ export const Contact = () => {
                         setErrorMessageVisible(false);
                     }, 3000);
                     setSuccessMessageVisible(false);
+                    setIsLoading(false);
                 }
             );
     };
@@ -132,7 +136,13 @@ export const Contact = () => {
                                 </label>
                             </div>
                         </div>
-                        <button type='submit'>Submit</button>
+                        {isLoading ? (
+                            <button className='loader' type='reset'>
+                                Loading...
+                            </button>
+                        ) : (
+                            <button type='submit'>Submit</button>
+                        )}
                     </form>
                 </Animate>
             </div>

@@ -40,7 +40,7 @@
                 position: relative;
 
                 &:hover .overlay {
-                    opacity: 1;
+                    opacity: 0.8;
                 }
                 &__img-wrapper {
                     height: 100%;
@@ -79,6 +79,7 @@
                             overflow: hidden;
                             white-space: nowrap;
                             font-size: 4rem;
+                            font-weight: 700;
                             animation: typingEffect 1s steps(30, end);
                         }
                         .overlay__btn-wrapper {
@@ -86,11 +87,11 @@
                             width: 100%;
                             align-items: center;
                             justify-content: center;
+                            gap: 10px;
                             margin-top: 50px;
                             button {
                                 cursor: pointer;
-                                margin-right: 4px;
-                                padding: 10px 5px;
+                                padding: 5px;
                                 font-size: 1.5rem;
                                 background: var(
                                     --yellow-theme-background-color
@@ -135,7 +136,7 @@
     }
     .overlay {
         div > p {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
     }
 }

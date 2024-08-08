@@ -6,9 +6,19 @@ import Youtube from "../../Images/Youtube_Clone.jpeg";
 import Amazon from "../../Images/Amazon_UI_Clone.avif";
 import Social from "../../Images/Social_Media.jpg";
 import Netflix from "../../Images/Netflix_UI_Clone.jpeg";
-import Myntra from "../../Images/Myntra.png";
+import FoodApp from "../../Images/FoodOrderingApp.png";
+import { FaGitAlt } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
 
 const portfolioData = [
+    {
+        id: "2",
+        label: "Food Ordering App",
+        image: FoodApp,
+        repoLink: "https://github.com/vitthal-07/Food-Ordering-App-Frontend",
+        demoLink: "https://food-ordering-app-frontend-oz3l.onrender.com",
+    },
+
     {
         id: "2",
         label: "Youtube Clone",
@@ -16,19 +26,19 @@ const portfolioData = [
         repoLink: "https://github.com/vitthal-07/Youtube-Clone",
         demoLink: "https://youtube-clone-by-vitthal.netlify.app/",
     },
-    {
-        id: "2",
-        label: "Myntra Clone",
-        image: Myntra,
-        repoLink: "https://github.com/vitthal-07/Myntra-Clone-Using-React",
-        demoLink: "",
-    },
+
     {
         id: "2",
         label: "SocialSphere",
         image: Social,
         repoLink: "https://github.com/vitthal-07/SocialSphere-Using-React",
         demoLink: "",
+    },
+    {
+        id: "2",
+        label: "Food Ordering App Backend",
+        image: FoodApp,
+        repoLink: "https://github.com/vitthal-07/Food-Ordering-App-Backend",
     },
     {
         id: "2",
@@ -130,14 +140,14 @@ export const Portfolio = () => {
                                                     handleSourceCodeClick(index)
                                                 }
                                             >
-                                                Source Code
+                                                <FaGitAlt size={25} />
                                             </button>
                                             <button
                                                 onClick={() =>
                                                     handleDemoClick(index)
                                                 }
                                             >
-                                                Live Demo
+                                                <FaLink size={25} />
                                             </button>
                                         </div>
                                     </div>
